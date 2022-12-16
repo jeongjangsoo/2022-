@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.mapper.DangGoMapper">
+
+	<select id="ResSearch" parameterType="String" resultType="ResDTO">
+		select res_name from res_restaurant where res_name=#{raddr}
+	</select>
+	
+
+
+	<select id="ResInfo" parameterType="String" resultType="ResDTO">
+   select h1.res_seq, h1.res_name, h1.res_addr, h1.res_runtime, h1.res_convenient, h1.res_tel, h2.menu_name, h2.menu_img1, h2.menu_price,h1.latitude,h1.longitude,h1.keyword_img from tbl_restaurant h1, tbl_menu h2
+   where h1.res_seq = h2.res_seq and h1.res_name=#{rName}
+</select>
+
+
+
+	<select id="listLoc" parameterType="String" resultType="ResDTO">
+		select menu_img1,res_name,loc from (select tbl_menu.menu_img1,
+		tbl_restaurant.res_name, loc from tbl_menu, tbl_restaurant where
+		tbl_menu.res_seq = tbl_restaurant.res_seq) where loc=#{raddr}
+	</select>
+
+	<select id="restultInfo"
+		parameterType="com.smhrd.model.ResultSetDTO"
+		resultType="com.smhrd.model.ResultSetDTO">
+		select * from tbl_restaurant where res_addr like
+		'%'||#{res_addr}||'%' and res_categoy=#{res_categoy}
+	</select>
+
+
+</mapper>

@@ -1,0 +1,49 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  
+  	<servlet>
+	    <servlet-name>listResCon</servlet-name>
+ 		<display-name>listResCon</display-name>
+	    <servlet-class>com.smhrd.controller.listResCon</servlet-class>
+	</servlet>
+	<servlet>
+	    <servlet-name>ResultCon</servlet-name>
+ 		<display-name>ResultCon</display-name>
+	    <servlet-class>com.smhrd.controller.ResultCon</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ResInfo</servlet-name>
+		<display-name>ResInfo</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.ResInfo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>reviewWriteCon</servlet-name>
+		<display-name>reviewWriteCon</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.reviewWriteCon</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>listResCon</servlet-name>
+	    <url-pattern>/listResCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>ResultCon</servlet-name>
+	    <url-pattern>/resultCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ResInfo</servlet-name>
+		<url-pattern>/ResInfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>reviewWriteCon</servlet-name>
+		<url-pattern>/reviewWriteCon</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+

@@ -1,0 +1,392 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'EF_hyunygothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_hyunygothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  width: 100vw;
+}
+.left, .right {
+  width: 50vw;
+  overflow: hidden;
+  display: inline-block;
+}
+.left {
+  color:pink;
+  transform: skew(0deg, -15deg);
+}
+.right {
+  color: black;
+  transform: skew(0deg, 15deg);
+}
+.left .content {
+  width: 100vw;
+  text-align: center;
+}
+.right .content {
+  width: 100vw;
+  text-align: center;
+  transform: translate(-50vw);
+}
+span {
+  display: inline-block;
+  font-family: 'EF_hyunygothic', sans-serif;
+  font-size: 2vw;
+  text-transform: uppercase;
+  line-height: .8;
+  transition: ease-out .6s;
+}
+p{
+  display: inline-block;
+  font-family: 'EF_hyunygothic', sans-serif;
+  font-size: 4vw;
+  text-transform: uppercase;
+  line-height: .8;
+  transition: ease-out .6s;
+}
+
+/* footer 하단 고정 [S] */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+#wrap {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header {
+  width: 100%;
+  height: 60px;
+  background: #ddd;
+}
+footer {
+  width: 100%;
+  height: 40px;
+  background: #ddd;
+  margin-top: auto;
+  position: absolute;
+
+}
+      
+/* 중앙 당고 소개 내용 */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #97cfca;
+  overflow: hidden;
+}
+
+.terminal-window {
+  text-align: left;
+  width: 37.5rem;
+  height: 22.5rem;
+  border-radius: .625rem;
+  margin: auto;
+  position: relative;
+  top: 10.5rem;
+}
+
+.terminal-window header {
+  background: #E0E8F0;
+  width:110%;
+  height: 2.875rem;
+  border-radius: .5rem .5rem 0 0;
+  padding-left: .625rem;
+}
+
+.terminal-window header .button {
+  width: .75rem;
+  height: .75rem;
+  margin: .625rem .25rem 0 0;
+  display: inline-block;
+  border-radius: .5rem;
+}
+
+.terminal-window header .button.green {
+  background: #3BB662;
+}
+
+.terminal-window header .button.yellow {
+  background: #E5C30F;
+}
+
+.terminal-window header .button.red {
+  background: #E75448;
+}
+
+.terminal-window section.terminal {
+  color: white;
+  font-family: EF_hyunygothic ;
+  font-size: 11pt;
+  background: #30353A;
+  padding: .625rem;
+  box-sizing: border-box;
+  position: absolute;
+  width: 110%;
+  top: 1.875rem;
+  bottom: 0;
+  overflow: auto;
+}
+
+.terminal-window section.terminal .typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.terminal-data { display: none; }
+.terminal-window .gray { color: gray; }
+.terminal-window .green { color: green;}
+
+/*Media for mobile responsive viewing*/
+@media only screen and (max-width: 600px) {
+.terminal-window {
+  text-align: left;
+  width: 37.5vmin;
+  height: 22.5vmin;
+  border-radius: .625vmin;
+  margin: auto;
+  position: relative;
+  top: 30.5vmin;
+}
+}
+@media only screen and (max-width: 600px) {
+.terminal-window header {
+  background: #E0E8F0;
+  height: 1.875vmin;
+  border-radius: .5vmin .5vmin 0 0;
+  padding-left: 1vmin;
+}
+}
+@media only screen and (max-width: 600px) {
+.terminal-window header .button {
+  width: .75vmin;
+  height: .75vmin;
+  margin: .625vmin .25vmin 0 0;
+  display: inline-block;
+  border-radius: .5vmin;
+}
+}
+@media only screen and (max-width: 600px) {
+.terminal-window header .button.green {
+  background: #3BB662;
+}
+}
+@media only screen and (max-width: 600px) {
+.terminal-window header .button.yellow {
+  background: #E5C30F;
+}
+}
+@media only screen and (max-width: 600px) {
+.terminal-window header .button.red {
+  background: #E75448;
+}
+}
+@media only screen and (max-width: 600px) {
+.terminal-window section.terminal {
+  color: white;
+  font-family: EF_hyunygothic;
+  font-size: .3000vmin;
+  background: #30353A;
+  padding: .625vmin;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 1.875vmin;
+  bottom: 0;
+  overflow: auto;
+}
+}
+.terminal-window section.terminal .typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.terminal-data { display: none; }
+.terminal-window .gray { color: gray; }
+.terminal-window .green { color: green;}
+
+
+main {
+	
+width: 100%;
+top:0;
+position: sticky;
+
+	
+}
+
+/*  검색창 구현*/
+
+*:focus {
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "proxima-nova", "Lato", sans-serif;
+  background: #ee4f3f;
+}
+body #project-wrapper {
+  height: 100vh;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+body #project-wrapper #project-container {
+  height: 50px;
+  min-width: 550px;
+  width: 550px;
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+body #project-wrapper #project-container nav {
+  line-height: 50px;
+  font-size: 1em;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+body #project-wrapper #project-container nav p {
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+}
+body #project-wrapper #project-container nav p:hover {
+  opacity: 0.8;
+}
+body #project-wrapper #project-container nav p i {
+  margin-left: 2px;
+  font-size: 0.9em;
+}
+body #project-wrapper #project-container nav .dropdown {
+  display: hidden;
+  opacity: 0;
+  visibility: hidden;
+  margin-top: -20px;
+  position: absolute;
+  background: white;
+  width: 250px;
+  z-index: 4;
+  border-radius: 4px;
+  left: calc(50% - 235px);
+  -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+}
+body #project-wrapper #project-container nav .dropdown::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: calc(50% - 5px);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  z-index: 3;
+}
+body #project-wrapper #project-container nav .dropdown.show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+body #project-wrapper #project-container nav .dropdown p {
+  color: #e74c3c;
+  display: block;
+  text-align: left;
+  padding: 0 18px;
+  margin: -4px 0;
+}
+body #project-wrapper #project-container nav .dropdown p:hover {
+  opacity: 0.8;
+}
+body #project-wrapper #project-container nav .dropdown p:nth-child(1) {
+  padding-top: 4px;
+}
+body #project-wrapper #project-container nav .dropdown p:nth-child(5) {
+  padding-bottom: 4px;
+}
+body #dailyui {
+  position: fixed;
+  font-size: 12em;
+  font-weight: 700;
+  margin: 0 0 -28px 0;
+  padding: 0;
+  right: 5px;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  text-align: right;
+  font-family: "proxima-nova", "Lato", sans-serif;
+}
+

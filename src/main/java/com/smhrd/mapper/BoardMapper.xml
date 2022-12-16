@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.db.BoardMapper">
+	<select id="selectAllBoard" resultType="Board">
+		select receipt_img,review_content,reviewer_name,uploadday from tbl_review
+	</select>
+	
+	<select id="selectOneBoard" resultType="Board" parameterType="int">
+		select * from board where num=#{num}
+	</select>
+	
+	
+	<insert id="insertReview" parameterType="reviewDTO">
+	 insert into tbl_review values(tbl_review_seq.nextval, #{resNum},#{img},#{content},#{username}, sysdate)
+	</insert>
+	
+	<select id="showReview" parameterType = "String" resultType="reviewDTO">
+	select * from (select * from tbl_review order by uploadday desc) where res_seq = (select res_seq from tbl_restaurant where res_name=#{res_name}) 
+	</select>
+	
+</mapper>
